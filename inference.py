@@ -59,7 +59,7 @@ print("Done!")
 
 # load backbone MLP model
 print("=====Loading classification model=====")
-predictor = TripletClassificationModel.load_from_checkpoint("./Models/coach420/epoch=17-step=12708.ckpt").full_model
+predictor = TripletClassificationModel.load_from_checkpoint("./Models/COACH420/coach420.ckpt").full_model
 predictor.eval()
 print("Done!")
 
