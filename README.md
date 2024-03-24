@@ -2,6 +2,8 @@
 
 This repo holds the code of CLAPE (Contrastive Learning And Pre-trained Encoder) for protein-small molecules binding (SMB) sites prediction. 
 
+CLAPE-SMB is a member of [CLAPE framework](https://github.com/YAndrewL/clape).
+
 CLAPE-SMB is primarily dependent on a large-scale pre-trained protein language model [ESM-2](https://github.com/facebookresearch/esm)  implemented using [HuggingFace's Transformers](https://huggingface.co/) and [PyTorch](https://pytorch.org/). Please install the dependencies in advance. 
 
 ## Files and folders description
