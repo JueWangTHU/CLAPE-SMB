@@ -19,7 +19,7 @@ This fold contains trained weights files. We split the ckpt files and you can us
 
 ```
 cd ./Models/COACH420
-cat COACH420_*. > coach420.ckpt
+cat COACH420_* > coach420.ckpt
 ```
 
 ## Codes description
