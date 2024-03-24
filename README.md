@@ -15,7 +15,7 @@ Note: if you wanna find the original data in PDB format, please kindly refer to 
 In this project, we used sc-PDB as the training set, JOINED as the validation set and COACH420 as the testing set. 
 
 ### 2. Models
-This fold contains trained weights files. We split the ckpt files and you can use follow commands to merge them: 
+This fold contains trained weights files. The original ckpt file was too large, so we split it and you can use follow commands to merge them: 
 
 ```
 cd ./Models/COACH420
