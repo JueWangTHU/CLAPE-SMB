@@ -65,7 +65,7 @@ Some parameters are described as follows:
 | Parameters  | Descriptions                                                 |
 | ----------- | ------------------------------------------------------------ |
 | --threshold | Specify the threshold for identifying the binding site, the value needs to be between 0 and 1, default: 0.5. |
-| --input     | The path of the input file in FASTA format.                  |
+| --input     | The path of the input file in txt format.                  |
 | --output    | The path of the output file, the first and the second line are the same as the input file, and the third line is the prediction result. |
 
 Please contact wangjue21@mails.tsinghua.edu.cn for questions. 
