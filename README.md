@@ -14,7 +14,13 @@ The first line is the protein id (which might not be PDB ID); the second line is
 
 Note: if you wanna find the original data in PDB format, please kindly refer to the following 3 papers: [PUResNet](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-021-00547-7), [P2Rank](https://jcheminf.biomedcentral.com/articles/10.1186/s13321-018-0285-8), and [GraphBind](https://academic.oup.com/nar/article/49/9/e51/6134185?login=true). 
 
-In this project, we used sc-PDB as the training set, JOINED as the validation set and COACH420 as the testing set. 
+In this project, we both used standard datasets and our own datasets. 
+
+## Standard datasets
+sc-PDB as the training set, JOINED as the validation set and COACH420 as the testing set. 
+
+## Our dataset: UniProtPDB
+We collected all reviewed proteins with 3D structure in UniProt database, noted their small molecules-binding sites and got a raw dataset, mainly including metal ions, cofactors, ATP and heme. We noticed that the ratio of binding residues of our raw dataset was lower than benchmark datasets, indicating the existence of unnoticed binding sites. Therefore, we utilized UCLUST to categorize proteins exhibiting a sequence similarity surpassing 50% into the same cluster, and then used MAFFT to merge their small molecules-binding sites into one single protein sequence, and got UniProtPDB, consisted of totally 8772 proteins. We randomly picked 4000 proteins as training set, 500 proteins as valid set and 500 proteins as test set. 
 
 ### 2. Models
 This fold contains trained weights files. The original ckpt file was too large, so we split it and you can use follow commands to merge them: 
