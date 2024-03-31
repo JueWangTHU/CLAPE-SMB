@@ -19,8 +19,8 @@ In this project, we both used standard datasets and our own datasets.
 #### Standard datasets
 sc-PDB as the training set, JOINED as the validation set and COACH420 as the testing set. 
 
-#### Our dataset: UniProtPDB
-We collected all reviewed proteins with 3D structure in UniProt database, noted their small molecules-binding sites and got a raw dataset, mainly including metal ions, cofactors, ATP and heme. We noticed that the ratio of binding residues of our raw dataset was lower than benchmark datasets, indicating the existence of unnoticed binding sites. Therefore, we utilized UCLUST to categorize proteins exhibiting a sequence similarity surpassing 50% into the same cluster, and then used MAFFT to merge their small molecules-binding sites into one single protein sequence, and got UniProtPDB, consisted of totally 8772 proteins. We randomly picked 4000 proteins as training set, 500 proteins as valid set and 500 proteins as test set. 
+#### Our dataset: UniProtSMB
+We create a large, high-quality dataset named UniprotSMB for better train and evaluate CLAPE-SMB. We collect all reviewed proteins with 3D structures from the UniProt database, mark their small molecules-binding sites, utilize UCLUST to group proteins exhibiting sequence similarity exceeding 50% into the same cluster, and use MAFFT to merge their small molecules-binding sites into a single protein sequence. Next, we removed all sequences exceeding a length of 1,024, finally resulting in UniProtSMB, which consisted of 8,013 proteins. 
 
 ### 2. Models
 This fold contains trained weights files. The original ckpt file was too large, so we split it and you can use follow commands to merge them: 
