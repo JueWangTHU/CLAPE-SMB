@@ -1,6 +1,6 @@
-# CLAPE-SMB: Protein-small molecules binding sites prediction
+# CLAPE-SMB: Protein-small molecule binding site prediction
 
-This repo holds the code of CLAPE (Contrastive Learning And Pre-trained Encoder) for protein-small molecules binding (SMB) sites prediction. 
+This repo holds the code of CLAPE (Contrastive Learning And Pre-trained Encoder) for protein-small molecule binding (SMB) site prediction. 
 
 CLAPE-SMB is a member of [CLAPE framework](https://github.com/YAndrewL/clape).
 
@@ -20,7 +20,7 @@ In this project, we both used standard datasets and our own datasets.
 sc-PDB as the training set, JOINED as the validation set and COACH420 as the testing set. 
 
 #### Our dataset: UniProtSMB
-We create a large, high-quality dataset named UniprotSMB for better train and evaluate CLAPE-SMB. First, we collected all 13,661 reviewed proteins with 3D structures and small moleucles-binding sites among 248,805,733 proteins in the UniProt database. Second, we conducted a length cutoff and obtained 12,450 proteins with a length not exceeding 1024. Third, we identified their binding sites, including metal ions, cofactors, ATP, and other small molecules. Notably, pink residues represent binding sites while blue ones represent non-binding sites. Next, we clustered proteins with a sequence similarity cutoff of 50% using UCLUST, obtaining 8,035 clusters. Subsequently, we conducted MAFFT on all proteins within each cluster and merged all binding sites to the longest sequence, resulting in the UniProtSMB dataset containing 8,035 proteins. At last, we divided UniProtSMB to training set (6,429 proteins), validation set (803 proteins) and test set (803 proteins). 
+We create a large, high-quality dataset named UniprotSMB for better train and evaluate CLAPE-SMB. First, we collected all 13,661 reviewed proteins with 3D structures and small molecule-binding sites among 248,805,733 proteins in the UniProt database. Second, we conducted a length cutoff and obtained 12,450 proteins with a length not exceeding 1024. Third, we identified their binding sites, including metal ions, cofactors, ATP, and other small molecules. Notably, pink residues represent binding sites while blue ones represent non-binding sites. Next, we clustered proteins with a sequence similarity cutoff of 50% using UCLUST, obtaining 8,035 clusters. Subsequently, we conducted MAFFT on all proteins within each cluster and merged all binding sites to the longest sequence, resulting in the UniProtSMB dataset containing 8,035 proteins. At last, we divided UniProtSMB to training set (6,429 proteins), validation set (803 proteins) and test set (803 proteins). 
 
 ### 2. Models
 This fold contains trained weights files. The original ckpt file was too large, so we split it and you can use follow commands to merge them: 
@@ -54,7 +54,7 @@ This python file counts the number of positive and negative samples for training
 ### 7. inference.py
 #### Usage:
 
-We provide the Python script for predicting small-molecules binding sites of given protein sequences in txt format. Here we provide a sample file, please use following commands:
+We provide the Python script for predicting small-molecule binding site of given protein sequences in txt format. Here we provide a sample file, please use following commands:
 
 ```
 python inference.py --input example.txt --output CLAPE_SMB_result.txt
