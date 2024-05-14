@@ -17,17 +17,20 @@ Note: if you wanna find the original data in PDB format, please kindly refer to 
 In this project, we both used standard datasets and our own datasets. 
 
 #### Standard datasets
-sc-PDB as the training set, JOINED as the validation set and COACH420 as the testing set. 
+sc-PDB, chen11, JOINED, and COACH420 are popular protein-small molecule binding datasets. 
+
+#### Integrated datase: SJC
+sc-PDB, JOINED, and COACH420 are integrated into a new dataset named SJC, which is taken from the first letter of each dataset name. To eliminate the impact of redundant sequences and enhance model robustness, all protein sequences from three datasets are processed using UCLUST, with a sequence similarity cutoff of 50%. Then these non-redundant sequences are further divided into training (80%), validation (10%), and test (10%) sets. 
 
 #### Our dataset: UniProtSMB
-We create a large, high-quality dataset named UniprotSMB for better train and evaluate CLAPE-SMB. First, we collected all 13,661 reviewed proteins with 3D structures and small molecule-binding sites among 248,805,733 proteins in the UniProt database. Second, we conducted a length cutoff and obtained 12,450 proteins with a length not exceeding 1024. Third, we identified their binding sites, including metal ions, cofactors, ATP, and other small molecules. Notably, pink residues represent binding sites while blue ones represent non-binding sites. Next, we clustered proteins with a sequence similarity cutoff of 50% using UCLUST, obtaining 8,035 clusters. Subsequently, we conducted MAFFT on all proteins within each cluster and merged all binding sites to the longest sequence, resulting in the UniProtSMB dataset containing 8,035 proteins. At last, we divided UniProtSMB to training set (6,429 proteins), validation set (803 proteins) and test set (803 proteins). 
+We create a large, high-quality dataset named UniprotSMB for better train and evaluate CLAPE-SMB. First, we collected all 14,064 reviewed proteins with 3D structures and small molecule-binding sites among 248,805,733 proteins in the UniProtKB database as of April 17, 2024. Second, we conducted a length cutoff and obtained 12,804 proteins with a length not exceeding 1024. Third, we identified their binding sites, including drugs, cofactors, ATP, and other small molecules, but not including metal ions. Next, we clustered proteins with a sequence similarity cutoff of 50% using UCLUST, obtaining 4,964 clusters. Subsequently, we conducted MAFFT on all proteins within each cluster and merged all binding sites to the longest sequence, resulting in the UniProtSMB dataset containing 4,964 proteins. At last, we divided UniProtSMB to training set (3,972 proteins), validation set (496 proteins) and test set (496 proteins). 
 
 ### 2. Models
 This fold contains trained weights files. The original ckpt file was too large, so we split it and you can use follow commands to merge them: 
 
 ```
-cd ./Models/COACH420
-cat COACH420_* > coach420.ckpt
+cd ./Models/SJC
+cat SJC_* > SJC.ckpt
 ```
 
 ## Codes description
