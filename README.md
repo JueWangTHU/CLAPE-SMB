@@ -17,7 +17,7 @@ Note: if you wanna find the original data in PDB format, please kindly refer to 
 In this project, we both used standard datasets and our own datasets. 
 
 #### Standard datasets
-sc-PDB, chen11, JOINED, and COACH420 are popular protein-small molecule binding datasets. 
+sc-PDB, CHEN11, JOINED, and COACH420 are popular protein-small molecule binding datasets. 
 
 #### Integrated datase: SJC
 sc-PDB, JOINED, and COACH420 are integrated into a new dataset named SJC, which is taken from the first letter of each dataset name. To eliminate the impact of redundant sequences and enhance model robustness, all protein sequences from three datasets are processed using UCLUST, with a sequence similarity cutoff of 50%. Then these non-redundant sequences are further divided into training (80%), validation (10%), and test (10%) sets. 
