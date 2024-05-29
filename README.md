@@ -25,6 +25,9 @@ sc-PDB, JOINED, and COACH420 are integrated into a new dataset named SJC, which 
 #### Our dataset: UniProtSMB
 We create a large, high-quality dataset named UniprotSMB for better train and evaluate CLAPE-SMB. First, we collected all 14,064 reviewed proteins with 3D structures and small molecule-binding sites among 248,805,733 proteins in the UniProtKB database as of April 17, 2024. Second, we conducted a length cutoff and obtained 12,804 proteins with a length not exceeding 1024. Third, we identified their binding sites, including drugs, cofactors, ATP, and other small molecules, but not including metal ions. Next, we clustered proteins with a sequence similarity cutoff of 50% using UCLUST, obtaining 4,964 clusters. Subsequently, we conducted MAFFT on all proteins within each cluster and merged all binding sites to the longest sequence, resulting in the UniProtSMB dataset containing 4,964 proteins. At last, we divided UniProtSMB to training set (3,972 proteins), validation set (496 proteins) and test set (496 proteins). 
 
+#### Intrinsically disordered proteins (IDPs) dataset
+We randomly collect 526 IDPs in the UniProtKB database and annotated their small molecule binding sites. After deduplication based on sequence similarity between training sets of UniProtSMB and IDP dataset, we got 336 non-redundant sequences.
+
 ### 2. Models
 This fold contains trained weights files. The original ckpt file was too large, so we split it and you can use follow commands to merge them: 
 
