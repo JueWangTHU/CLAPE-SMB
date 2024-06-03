@@ -28,6 +28,9 @@ We create a large, high-quality dataset named UniprotSMB for better train and ev
 #### Intrinsically disordered proteins (IDPs) dataset
 We randomly collect 526 IDPs in the UniProtKB database and annotated their small molecule binding sites. After deduplication based on sequence similarity between training sets of UniProtSMB and IDP dataset, we got 336 non-redundant sequences.
 
+#### IDP_IDR
+We identified 34 protein sequences with small molecule binding sites on IDRs in the UniProtKB database. These sequences are non-redundant and have less than 50% similarity to any sequence in the UniProtSMB training set.
+
 ### 2. Models
 This fold contains trained weights files. The original ckpt file was too large, so we split it and you can use follow commands to merge them: 
 
