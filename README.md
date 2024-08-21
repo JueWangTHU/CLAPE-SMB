@@ -32,12 +32,7 @@ We randomly collect 526 IDPs in the UniProtKB database and annotated their small
 We identified 34 protein sequences with small molecule binding sites on IDRs in the UniProtKB database. These sequences are non-redundant and have less than 50% similarity to any sequence in the UniProtSMB training set.
 
 ### 2. Models
-This fold contains trained weights files. The original ckpt file was too large, so we split it and you can use follow commands to merge them: 
-
-```
-cd ./Models/SJC
-cat SJC_* > SJC.ckpt
-```
+This fold contains trained weights files on the SJC and UniProtSMB datasets. Models trained with different random seeds on both datasets are available. Additionally, k-fold cross-validation models on the UniProtSMB dataset are provided for further reference.
 
 ## Codes description
 The training and implementation of this project are based on PyTorch and PyTorch-lightning 1.9.5, the higher version might not be compatible. 
