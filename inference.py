@@ -8,6 +8,7 @@ import argparse
 import esm
 from triplet import TripletClassificationModel
 from tqdm import tqdm
+from model import ContinueModel
 
 # load instructions
 parse = argparse.ArgumentParser()
@@ -59,7 +60,8 @@ print("Done!")
 
 # load backbone MLP model
 print("=====Loading classification model=====")
-predictor = TripletClassificationModel.load_from_checkpoint("./Models/SJC/SJC.ckpt").full_model
+predictor = ContinueModel()
+predictor.load_state_dict(torch.load('./Models/SJC/random_seed/42.ckpt'))
 predictor.eval()
 print("Done!")
 
