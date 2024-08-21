@@ -167,9 +167,9 @@ if __name__ == '__main__':
     batch_size = 8
     
     data_params = {'batch_size': batch_size, 
-                    'train_data_root': './Dataset/SM/esm_train_UniProtPDB.pkl',
-                    'val_data_root': './Dataset/SM/esm_valid_UniProtPDB.pkl'}
-    samples_per_class = count.count('./Raw_data/train_UniProtPDB.txt')
+                    'train_data_root': './Dataset/SM/esm_train_UniProtSMB.pkl',
+                    'val_data_root': './Dataset/SM/esm_valid_UniProtSMB.pkl'}
+    samples_per_class = count.count('./Raw_data/train_UniProtSMB.txt')
 
     data = ProteinLigandData(**data_params)
     
