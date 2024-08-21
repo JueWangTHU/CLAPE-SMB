@@ -190,7 +190,7 @@ if __name__ == '__main__':
     training_time = time.strftime('%m-%d-%H-%M-%S', time.localtime())
    
     checkpoint = ModelCheckpoint(dirpath='triplet_classification/' + ligand + model_backbone + training_time,
-                                 save_top_k=1, monitor='AUC', mode='max')
+                                 save_top_k=1, monitor='MCC', mode='max')
     tb_logger = pl_loggers.TensorBoardLogger(save_dir='triplet_classification/' + ligand + model_backbone + training_time, name='pl_logs',
                                              version='', default_hp_metric=False)
     trainer = pl.Trainer(logger=tb_logger, callbacks=checkpoint, max_epochs=epochs,
