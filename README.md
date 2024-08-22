@@ -32,7 +32,10 @@ We randomly collect 526 IDPs in the UniProtKB database and annotated their small
 We identified 34 protein sequences with small molecule binding sites on IDRs in the UniProtKB database. These sequences are non-redundant and have less than 50% similarity to any sequence in the UniProtSMB training set.
 
 ### 2. Models
-This fold contains trained weights files on the SJC and UniProtSMB datasets. Models trained with different random seeds on both datasets are available. Additionally, k-fold cross-validation models on the UniProtSMB dataset are provided for further reference.
+This fold contains trained weights files on the SJC and UniProtSMB datasets. 
+Models trained with different random seeds on both datasets are available. 
+Additionally, k-fold cross-validation models on the UniProtSMB dataset are provided for further reference. 
+Notably, the default random seed is 42, and k-fold cross-validation was done with random seed 42. 
 
 ## Codes description
 The training and implementation of this project are based on PyTorch and PyTorch-lightning 1.9.5, the higher version might not be compatible. 
@@ -48,6 +51,7 @@ Implementation of several customized loss functions such as class-balanced focal
 
 ### 4. triplet.py
 Implementation of the total training setting, please kindly refer to the document of PyTorch-lightning for details. (1.9.5)
+You can train new models with prepared embeddings and set hyperparamaters here. 
 
 ### 5. pre.py
 This python file generates protein sequence embeddings, ESM-2 and ProtBert were provided.
