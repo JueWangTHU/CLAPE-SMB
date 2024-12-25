@@ -77,3 +77,24 @@ Some parameters are described as follows:
 | --output    | The path of the output file, the first and the second line are the same as the input file, and the third line is the prediction result. |
 
 Please contact wangjue21@mails.tsinghua.edu.cn for questions. 
+
+If you are using CLAPE-SMB, please also kindly cite: 
+```
+@article{10.1186/s13321-024-00920-2,
+    author={Wang, Jue
+    and Liu, Yufan
+    and Tian, Boxue},
+    title={Protein-small molecule binding site prediction based on a pre-trained protein language model with contrastive learning},
+    journal={Journal of Cheminformatics},
+    year={2024},
+    month={Nov},
+    day={06},
+    volume={16},
+    number={1},
+    pages={125},
+    issn={1758-2946},
+    doi={10.1186/s13321-024-00920-2},
+    url={https://doi.org/10.1186/s13321-024-00920-2}
+}
+
+```
